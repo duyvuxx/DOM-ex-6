@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom 6 Detect Key Pressed</title>
+    <script src="./assets/js/main.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Enter your keyboard</h2>
+      <input type="text" onkeydown="getKey(event)" />
+      <p id="key"></p>
+      <p id="which"></p>
+
+      <h2>Fill the input</h2>
+      <input type="text" id="fill" />
+      <p id="focus"></p>
+    </div>
+  </body>
+</html>

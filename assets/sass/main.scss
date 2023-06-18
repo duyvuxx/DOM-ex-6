@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // 62.5% <=> 10px
+  font-size: 62.5%;
+  line-height: 1.4;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+a {
+  &,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@mixin dflex($alignItems: center, $justifyContent: center) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+.container {
+  @include dflex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 50rem;
+
+  input {
+    height: 5rem;
+    padding: 0 2rem;
+
+    font-size: 3rem;
+    border-radius: 2rem;
+  }
+
+  p {
+    font-size: 2.5rem;
+  }
+}
