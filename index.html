@@ -11,14 +11,37 @@
 
   <body>
     <div class="container">
-      <h2>Enter your keyboard</h2>
-      <input type="text" onkeydown="getKey(event)" />
-      <p id="key"></p>
-      <p id="which"></p>
+      <div class="press">
+        <h2>Press any key</h2>
+      </div>
 
-      <h2>Fill the input</h2>
-      <input type="text" id="fill" />
-      <p id="focus"></p>
+      <div class="input hide">
+        <div class="circle">
+          <h3>top</h3>
+        </div>
+
+        <ul class="bottom">
+          <li class="bottom-items">
+            <h2 class="key">Key</h2>
+            <p></p>
+          </li>
+
+          <li class="bottom-items">
+            <h2 class="location">Location</h2>
+            <p></p>
+          </li>
+
+          <li class="bottom-items">
+            <h2 class="which">Which</h2>
+            <p></p>
+          </li>
+
+          <li class="bottom-items">
+            <h2 class="code">Code</h2>
+            <p></p>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

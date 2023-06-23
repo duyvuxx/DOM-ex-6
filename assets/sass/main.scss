@@ -44,17 +44,78 @@ ul {
   @include dflex;
   flex-direction: column;
   gap: 2rem;
-  height: 50rem;
+  height: 100vh;
 
-  input {
-    height: 5rem;
-    padding: 0 2rem;
+  background-color: #0f4fa3;
 
-    font-size: 3rem;
+  .press {
+    padding: 2rem;
+
     border-radius: 2rem;
+    font-size: 4rem;
+    background-color: white;
+    color: #175db8;
   }
 
-  p {
-    font-size: 2.5rem;
+  .input {
+    // display: none;
+
+    .circle {
+      text-align: center;
+
+      h3 {
+        position: relative;
+        font-size: 5rem;
+        color: #ffffff;
+      }
+
+      h3::after {
+        content: " ";
+        position: absolute;
+        inset: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20rem;
+        height: 20rem;
+        border: 1rem solid #ffffff;
+        border-radius: 50%;
+      }
+    }
+
+    .bottom {
+      @include dflex;
+      gap: 3rem;
+      width: 100rem;
+      margin-top: 15rem;
+
+      &-items {
+        @include dflex;
+        flex-direction: column;
+        flex: 1;
+
+        background-color: #2d8fff;
+        border-radius: 1rem;
+
+        overflow: hidden;
+
+        h2 {
+          padding: 1rem 0;
+        }
+
+        p {
+          width: 100%;
+          padding: 1rem 0;
+
+          text-align: center;
+          background-color: white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .hide {
+    display: none;
   }
 }

@@ -1,16 +1,24 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-function getKey(e) {
-  let key = e.key;
-  let which = e.keyCode;
-  $("#key").innerHTML = `Key pressed: ${key}`;
-  $("#which").innerHTML = `Which is: ${which}`;
-}
+const pressKey = $(".press");
+const input = $(".input");
 
-const fill = $("#fill");
-fill.addEventListener("input", myFunction);
+const circleText = $(".circle h3");
 
-function myFunction(e) {
-  $("#focus").innerHTML = `You wrote: ${e.target.value}`;
-}
+const key = $(".key");
+const locat = $(".location");
+const which = $(".which");
+const code = $(".code");
+
+document.addEventListener("keydown", (event) => {
+  circleText.innerHTML = event.key;
+
+  key.nextElementSibling.innerHTML = event.key;
+  locat.nextElementSibling.innerHTML = event.location;
+  which.nextElementSibling.innerHTML = event.which;
+  code.nextElementSibling.innerHTML = event.code;
+
+  input.classList.remove("hide");
+  pressKey.classList.add("hide");
+});
